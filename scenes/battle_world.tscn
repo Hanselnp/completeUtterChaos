@@ -164,24 +164,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.6)
 [node name="EnemyCellE5" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40.8)
 
-[node name="PlayerUnits" type="Node3D" parent="."]
+[node name="BattleManager" type="Node3D" parent="."]
 
-[node name="Player" parent="PlayerUnits" instance=ExtResource("3_onmvj")]
+[node name="PlayerUnits" type="Node3D" parent="BattleManager"]
+
+[node name="Player" parent="BattleManager/PlayerUnits" instance=ExtResource("3_onmvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10)
 
-[node name="Summon1" parent="PlayerUnits" instance=ExtResource("4_arxf3")]
+[node name="Summon1" parent="BattleManager/PlayerUnits" instance=ExtResource("4_arxf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30)
 
-[node name="Summon2" parent="PlayerUnits" instance=ExtResource("4_arxf3")]
+[node name="Summon2" parent="BattleManager/PlayerUnits" instance=ExtResource("4_arxf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 30)
 
-[node name="OpposingUnits" type="Node3D" parent="."]
+[node name="OpposingUnits" type="Node3D" parent="BattleManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 52)
 
-[node name="Enemy" parent="OpposingUnits" instance=ExtResource("5_e3pra")]
+[node name="Enemy" parent="BattleManager/OpposingUnits" instance=ExtResource("5_e3pra")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
 
-[node name="Enemy2" parent="OpposingUnits" instance=ExtResource("5_e3pra")]
+[node name="Enemy2" parent="BattleManager/OpposingUnits" instance=ExtResource("5_e3pra")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30)
 
 [node name="Camera3D" type="Camera3D" parent="."]
