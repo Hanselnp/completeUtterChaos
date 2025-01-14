@@ -1,0 +1,197 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbpvs3kfuq8j8"]
+
+[ext_resource type="PackedScene" uid="uid://c6ayuuvqcjmfu" path="res://scenes/player_cells.tscn" id="1_4xp1s"]
+[ext_resource type="PackedScene" uid="uid://dyib3rixbbdp3" path="res://scenes/enemy_cells.tscn" id="2_c2jbf"]
+[ext_resource type="PackedScene" uid="uid://dsc2p8bento3t" path="res://scenes/player.tscn" id="3_onmvj"]
+[ext_resource type="PackedScene" uid="uid://dm5t3ba3aw476" path="res://scenes/summons.tscn" id="4_arxf3"]
+[ext_resource type="PackedScene" uid="uid://dxepbeb35uht0" path="res://scenes/enemy.tscn" id="5_e3pra"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tnq7"]
+albedo_color = Color(0.760784, 0.698039, 0.501961, 1)
+
+[node name="BattleWorld" type="Node3D"]
+
+[node name="PlayerBoard" type="Node3D" parent="."]
+
+[node name="PlayerCellA1" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 0)
+
+[node name="PlayerCellA2" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 10.2)
+
+[node name="PlayerCellA3" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 20.4)
+
+[node name="PlayerCellA4" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 30.6)
+
+[node name="PlayerCellA5" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 40.8)
+
+[node name="PlayerCellB1" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 0)
+
+[node name="PlayerCellB2" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 10.2)
+
+[node name="PlayerCellB3" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 20.4)
+
+[node name="PlayerCellB4" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 30.6)
+
+[node name="PlayerCellB5" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 40.8)
+
+[node name="PlayerCellC1" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 0)
+
+[node name="PlayerCellC2" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 10.2)
+
+[node name="PlayerCellC3" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 20.4)
+
+[node name="PlayerCellC4" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 30.6)
+
+[node name="PlayerCellC5" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 40.8)
+
+[node name="PlayerCellD1" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 0)
+
+[node name="PlayerCellD2" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 10.2)
+
+[node name="PlayerCellD3" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 20.4)
+
+[node name="PlayerCellD4" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 30.6)
+
+[node name="PlayerCellD5" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 40.8)
+
+[node name="PlayerCellE1" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+
+[node name="PlayerCellE2" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.2)
+
+[node name="PlayerCellE3" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.4)
+
+[node name="PlayerCellE4" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.6)
+
+[node name="PlayerCellE5" parent="PlayerBoard" instance=ExtResource("1_4xp1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40.8)
+
+[node name="EnemyBoard" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 52)
+
+[node name="EnemyCellA1" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 0)
+
+[node name="EnemyCellA2" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 10.2)
+
+[node name="EnemyCellA3" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 20.4)
+
+[node name="EnemyCellA4" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 30.6)
+
+[node name="EnemyCellA5" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.8, 0, 40.8)
+
+[node name="EnemyCellB1" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 0)
+
+[node name="EnemyCellB2" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 10.2)
+
+[node name="EnemyCellB3" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 20.4)
+
+[node name="EnemyCellB4" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 30.6)
+
+[node name="EnemyCellB5" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6, 0, 40.8)
+
+[node name="EnemyCellC1" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 0)
+
+[node name="EnemyCellC2" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 10.2)
+
+[node name="EnemyCellC3" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 20.4)
+
+[node name="EnemyCellC4" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 30.6)
+
+[node name="EnemyCellC5" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4, 0, 40.8)
+
+[node name="EnemyCellD1" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 0)
+
+[node name="EnemyCellD2" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 10.2)
+
+[node name="EnemyCellD3" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 20.4)
+
+[node name="EnemyCellD4" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 30.6)
+
+[node name="EnemyCellD5" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2, 0, 40.8)
+
+[node name="EnemyCellE1" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+
+[node name="EnemyCellE2" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.2)
+
+[node name="EnemyCellE3" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.4)
+
+[node name="EnemyCellE4" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.6)
+
+[node name="EnemyCellE5" parent="EnemyBoard" instance=ExtResource("2_c2jbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 40.8)
+
+[node name="PlayerUnits" type="Node3D" parent="."]
+
+[node name="Player" parent="PlayerUnits" instance=ExtResource("3_onmvj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 10)
+
+[node name="Summon1" parent="PlayerUnits" instance=ExtResource("4_arxf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30)
+
+[node name="Summon2" parent="PlayerUnits" instance=ExtResource("4_arxf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 30)
+
+[node name="OpposingUnits" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 52)
+
+[node name="Enemy" parent="OpposingUnits" instance=ExtResource("5_e3pra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Enemy2" parent="OpposingUnits" instance=ExtResource("5_e3pra")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0.544639, -0.838671, 0, 0.838671, 0.544639, 1, 2.38069e-08, -3.66595e-08, -28.96, 37.9122, 46)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.822178, -0.324436, 0.467722, 0.162438, 0.921233, 0.353475, -0.545561, -0.214643, 0.810118, 0.00550175, 30.8841, 47.0909)
+shadow_enabled = true
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.373, -1.1, 45.576)
+size = Vector3(200, 1, 200)
+material = SubResource("StandardMaterial3D_2tnq7")
