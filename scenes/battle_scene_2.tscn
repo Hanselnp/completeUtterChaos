@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn7emib7ud4ps"]
+
+[ext_resource type="PackedScene" uid="uid://vpbo37pfcq1t" path="res://scenes/arena_generation.tscn" id="1_g514j"]
+
+[node name="BattleScene2" type="Node3D"]
+
+[node name="ArenaGeneration" parent="." instance=ExtResource("1_g514j")]
+
+[node name="UnitManager" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 17, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -33, 34, 33)

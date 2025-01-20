@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyib3rixbbdp3"]
+[gd_scene load_steps=4 format=3 uid="uid://dyib3rixbbdp3"]
+
+[ext_resource type="Script" path="res://scripts/enemy_cells.gd" id="1_hqvc7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_txu2x"]
 size = Vector3(10, 1, 10)
@@ -7,6 +9,7 @@ size = Vector3(10, 1, 10)
 albedo_color = Color(1, 0, 0.00392157, 1)
 
 [node name="EnemyCells" type="Area3D"]
+script = ExtResource("1_hqvc7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_txu2x")
