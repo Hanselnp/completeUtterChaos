@@ -1,16 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0rr7ee0ogmpk"]
+[gd_scene load_steps=4 format=3 uid="uid://c6ayuuvqcjmfu"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_r8my7"]
+[ext_resource type="Script" path="res://scripts/cell.gd" id="1_cvu8h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w8tky"]
 size = Vector3(10, 1, 10)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cwnrc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vc7ce"]
+albedo_color = Color(0.576471, 0.717647, 1, 1)
 
 [node name="Cell" type="Area3D"]
+script = ExtResource("1_cvu8h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_r8my7")
+shape = SubResource("BoxShape3D_w8tky")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-material_override = SubResource("StandardMaterial3D_cwnrc")
 flip_faces = true
 size = Vector3(10, 1, 10)
+material = SubResource("StandardMaterial3D_vc7ce")
