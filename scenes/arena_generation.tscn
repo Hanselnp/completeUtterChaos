@@ -1,16 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://vpbo37pfcq1t"]
+[gd_scene load_steps=2 format=3 uid="uid://vpbo37pfcq1t"]
 
 [ext_resource type="Script" path="res://scripts/arena_generation.gd" id="1_7p2ka"]
-[ext_resource type="PackedScene" uid="uid://c6ayuuvqcjmfu" path="res://scenes/player_cells.tscn" id="2_h0rde"]
-[ext_resource type="PackedScene" uid="uid://dyib3rixbbdp3" path="res://scenes/enemy_cells.tscn" id="3_plkmr"]
 
 [node name="ArenaGeneration" type="Node3D"]
 script = ExtResource("1_7p2ka")
-player_cells_scene = ExtResource("2_h0rde")
-enemy_cell_scene = ExtResource("3_plkmr")
-
-[node name="PlayerCells" parent="." instance=ExtResource("2_h0rde")]
-visible = false
-
-[node name="EnemyCells" parent="." instance=ExtResource("3_plkmr")]
-visible = false
