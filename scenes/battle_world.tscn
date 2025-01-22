@@ -1,12 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbpvs3kfuq8j8"]
+[gd_scene load_steps=4 format=3 uid="uid://cbpvs3kfuq8j8"]
 
-[ext_resource type="PackedScene" uid="uid://vpbo37pfcq1t" path="res://scenes/arena_generation.tscn" id="1_5aael"]
-[ext_resource type="Script" path="res://scripts/player_units.gd" id="2_4o24o"]
-[ext_resource type="PackedScene" uid="uid://c6ayuuvqcjmfu" path="res://scenes/cell.tscn" id="2_38426"]
-[ext_resource type="PackedScene" uid="uid://dsc2p8bento3t" path="res://scenes/player.tscn" id="3_onmvj"]
-[ext_resource type="PackedScene" uid="uid://dm5t3ba3aw476" path="res://scenes/summons.tscn" id="4_arxf3"]
-[ext_resource type="PackedScene" uid="uid://dxepbeb35uht0" path="res://scenes/enemy.tscn" id="5_e3pra"]
-[ext_resource type="Script" path="res://scripts/opposing_units.gd" id="5_kypka"]
+[ext_resource type="PackedScene" uid="uid://vpbo37pfcq1t" path="res://arena/arena_generation.tscn" id="1_5aael"]
+[ext_resource type="PackedScene" uid="uid://c6ayuuvqcjmfu" path="res://arena/cell.tscn" id="2_38426"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tnq7"]
 albedo_color = Color(0.760784, 0.698039, 0.501961, 1)
@@ -15,25 +10,9 @@ albedo_color = Color(0.760784, 0.698039, 0.501961, 1)
 
 [node name="ArenaGeneration" parent="." instance=ExtResource("1_5aael")]
 cell_scene = ExtResource("2_38426")
+grid_size = Vector2i(4, 8)
 
 [node name="BattleManager" type="Node3D" parent="."]
-
-[node name="PlayerUnits" type="Node3D" parent="BattleManager"]
-script = ExtResource("2_4o24o")
-player_unit = ExtResource("3_onmvj")
-summoned_unit = ExtResource("4_arxf3")
-
-[node name="OpposingUnits" type="Node3D" parent="BattleManager"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 52)
-script = ExtResource("5_kypka")
-
-[node name="Enemy" parent="BattleManager/OpposingUnits" instance=ExtResource("5_e3pra")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
-visible = false
-
-[node name="Enemy2" parent="BattleManager/OpposingUnits" instance=ExtResource("5_e3pra")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 30)
-visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0.544639, -0.838671, 0, 0.838671, 0.544639, 1, 2.38069e-08, -3.66595e-08, -28.96, 37.9122, 46)

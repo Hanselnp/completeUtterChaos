@@ -1,7 +1,7 @@
 extends Node
+class_name state
 
-
-
+# This is for enemy behaviour, list of functions
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

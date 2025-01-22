@@ -3,6 +3,9 @@ extends Area3D
 # Deteminded movement cost 
 @export var movement_cost: int = 1
 
+# Pre-loading scene for future asset change, check inspector in the right.
+#@export var scene: PackedScene
+
 # Units currently on this cell
 var units_on_cell: Array = []
 
@@ -13,20 +16,7 @@ var is_player_side: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Determine side based on the cell's position
-	var z_coord = global_transform.origin.z / 10.5  # Assuming spacing is 1.5
-	is_player_side = z_coord < 5  # Player side is in the first 5 rows
-	
-	connect("body_entered", _on_body_entered)
-	connect("body_exited", _on_body_exited)
-
-func _on_body_entered(body):
-	units_on_cell.append(body)
-	emit_signal("units_changed")
-
-func _on_body_exited(body):
-	units_on_cell.erase(body)
-	emit_signal("units_changed")
+	pass
 
 func identify_cell(is_player: bool):
 	# Guard clause to skip func is somehow CSGBox3D is no longer cell node's child
@@ -44,10 +34,17 @@ func identify_cell(is_player: bool):
 	$CSGBox3D.material = new_material
 	
 	# Need to put cell_type_identifier here later incase cells will be more unique later
-	
-
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass
+func _process(delta: float) -> void:
+	pass
+	
+
+func _on_body_entered(body):
+	units_on_cell.append(body)
+	emit_signal("units_changed")
+
+func _on_body_exited(body):
+	units_on_cell.erase(body)
+	emit_signal("units_changed")

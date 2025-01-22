@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwwmq8s5l0lqr"]
+
+[ext_resource type="Script" path="res://components/hitbox_component.gd" id="1_lr73i"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vd15b"]
+radius = 3.0
+height = 20.0
+
+[node name="HitboxComponent" type="CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.08122, 0)
+shape = SubResource("CapsuleShape3D_vd15b")
+script = ExtResource("1_lr73i")

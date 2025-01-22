@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxepbeb35uht0"]
+[gd_scene load_steps=4 format=3 uid="uid://dxepbeb35uht0"]
 
-[ext_resource type="PackedScene" uid="uid://hi0fyab58a4b" path="res://PlaceholderModels/pawn.glb" id="1_08fdd"]
+[ext_resource type="Script" path="res://unit/enemy.gd" id="1_arvr4"]
+[ext_resource type="PackedScene" uid="uid://hi0fyab58a4b" path="res://PlaceholderModels/pawn.glb" id="2_cvck8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bb5ki"]
 margin = 0.0
@@ -8,12 +9,13 @@ radius = 3.0
 height = 10.0
 
 [node name="Enemy" type="CharacterBody3D"]
+script = ExtResource("1_arvr4")
 
 [node name="Pivot" type="Node3D" parent="."]
 
 [node name="Character" type="Node3D" parent="Pivot"]
 
-[node name="pawn" parent="Pivot/Character" instance=ExtResource("1_08fdd")]
+[node name="pawn" parent="Pivot/Character" instance=ExtResource("2_cvck8")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.42937, 0)

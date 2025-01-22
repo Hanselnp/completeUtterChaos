@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://vpbo37pfcq1t"]
 
-[ext_resource type="Script" path="res://scripts/arena_generation.gd" id="1_7p2ka"]
+[ext_resource type="Script" path="res://arena/arena_generation.gd" id="1_7p2ka"]
 
 [node name="ArenaGeneration" type="Node3D"]
 script = ExtResource("1_7p2ka")
