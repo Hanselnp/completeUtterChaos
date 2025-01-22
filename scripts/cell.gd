@@ -28,16 +28,25 @@ func _on_body_exited(body):
 	units_on_cell.erase(body)
 	emit_signal("units_changed")
 
-func is_enemy_cell():
-	if $CSGBox3D:
-		# Duplicate the material to avoid modifying the original
-		var new_material = $CSGBox3D.material.duplicate()
-		# Set a random color
-		new_material.albedo_color = Color(0.75, 0, 0)
-		# Apply the new material to the CSGBox3D
-		$CSGBox3D.material = new_material
-		
-		
+func identify_cell(is_player: bool):
+	# Guard clause to skip func is somehow CSGBox3D is no longer cell node's child
+	if not $CSGBox3D:
+		print("Error: CSGBox3D missing, is no longer cell node's child")
+		pass
+	
+	# Duplicate the material to avoid modifying the original
+	var new_material = $CSGBox3D.material.duplicate()
+	
+	# if enemy -> cell_red else cell_blue
+	var new_color = Color(0.75, 0, 0) if not is_player else Color(0, 0, 0.75)
+	
+	new_material.albedo_color = new_color
+	$CSGBox3D.material = new_material
+	
+	# Need to put cell_type_identifier here later incase cells will be more unique later
+	
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:

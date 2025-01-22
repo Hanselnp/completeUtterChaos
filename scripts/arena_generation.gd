@@ -36,8 +36,8 @@ func generate_arena():
 			
 			# If is_player_side = false, run is_enemy_cell func in cell script to change color 
 			# (and its cell_type atribute to enemy cell, to be implemented)
-			if not is_player_side:
-				cell.is_enemy_cell()
+			
+			cell.identify_cell(is_player_side)
 				
 			# Assignr position to the cell
 			cell.global_transform.origin = Vector3(x * cell_spacing, 0, z * cell_spacing)
