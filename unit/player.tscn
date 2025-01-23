@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsc2p8bento3t"]
+[gd_scene load_steps=6 format=3 uid="uid://dsc2p8bento3t"]
 
+[ext_resource type="Script" path="res://unit/player_character.gd" id="1_afkdw"]
 [ext_resource type="PackedScene" uid="uid://bbbrgvfauqx8u" path="res://PlaceholderModels/king.glb" id="1_oc2lr"]
 [ext_resource type="PackedScene" uid="uid://ssvmi06hacj0" path="res://components/attack_component.tscn" id="2_arsob"]
 [ext_resource type="PackedScene" uid="uid://ddp7j25xq2ofc" path="res://components/health_component.tscn" id="3_gwqjv"]
@@ -7,11 +8,10 @@
 
 [node name="Player" type="CharacterBody3D"]
 
-[node name="Pivot" type="Node3D" parent="."]
+[node name="PlayerCharacter" type="Node3D" parent="."]
+script = ExtResource("1_afkdw")
 
-[node name="Character" type="Node3D" parent="Pivot"]
-
-[node name="King" parent="Pivot/Character" instance=ExtResource("1_oc2lr")]
+[node name="King" parent="." instance=ExtResource("1_oc2lr")]
 
 [node name="AttackComponent" parent="." instance=ExtResource("2_arsob")]
 

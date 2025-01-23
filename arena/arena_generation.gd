@@ -8,7 +8,7 @@ extends Node3D
 @export var grid_size: Vector2i = Vector2i(5, 10) 
 
 # Arena spacing between grids
-@export var cell_spacing: float = 10.5
+@export var cell_spacing: float = 11
 
 # Grid coordination in 2d array form
 var arena_grid: Dictionary = {}
@@ -17,7 +17,9 @@ var arena_grid: Dictionary = {}
 func _ready() -> void:
 	generate_arena()
 	
-	GlobalArena.input_arena_dictionary(arena_grid)
+	#GlobalArena.set_cell_spacing(cell_spacing)
+	GlobalArena.set_arena_size(grid_size)
+	GlobalArena.set_arena_dictionary(arena_grid)
 
 func generate_arena():
 	# x -> up down, z -> left right, from the csamera it generates from left to right
@@ -42,8 +44,6 @@ func generate_arena():
 			# Add cell to the grid coordinate dictionary
 			arena_grid[Vector2(x, z)] = cell
 			
-			
-
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:

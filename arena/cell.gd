@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body):
 	units_on_cell.append(body)
+	print("Cell is entered")
 	emit_signal("units_changed")
 
 func _on_body_exited(body):
